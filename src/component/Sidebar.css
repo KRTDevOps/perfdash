@@ -1,0 +1,67 @@
+@reference "tailwindcss";
+
+@layer components {
+  .sidebar {
+    @apply w-full border-b border-slate-200 bg-slate-100 py-2 lg:w-[220px] lg:border-r lg:border-b-0 lg:py-3;
+  }
+
+  .sidebar__nav {
+    @apply grid grid-cols-1 gap-1 px-2 sm:grid-cols-2 lg:grid-cols-1 lg:px-2;
+  }
+
+  .sidebar__nav-item {
+    @apply flex w-full items-center justify-between rounded-xl bg-white px-3 py-2.5 text-left shadow-sm ring-1 ring-slate-200 transition-colors;
+  }
+
+  .sidebar__nav-item--active {
+    @apply bg-slate-50 text-slate-900 ring-indigo-200;
+  }
+
+  .sidebar__nav-item--idle {
+    @apply text-slate-700 hover:bg-slate-50;
+  }
+
+  .sidebar__nav-item-content {
+    @apply flex items-center gap-3;
+  }
+
+  .sidebar__nav-item-icon-wrap {
+    @apply flex h-6 w-6 items-center justify-center rounded-md bg-slate-50 ring-1 ring-slate-200;
+  }
+
+  .sidebar__nav-item-icon {
+    @apply text-slate-500;
+  }
+
+  .sidebar__nav-item-label {
+    @apply text-sm font-semibold;
+  }
+
+  .sidebar__nav-item-count {
+    @apply rounded-full px-2 py-0.5 text-[10px] font-bold;
+  }
+
+  .sidebar__nav-item-count--green {
+    @apply bg-emerald-100 text-emerald-700;
+  }
+
+  .sidebar__nav-item-count--blue {
+    @apply bg-blue-100 text-blue-700;
+  }
+
+  .sidebar__nav-item-count--purple {
+    @apply bg-purple-100 text-purple-700;
+  }
+
+  @media (max-width: 1023px) {
+    .sidebar__nav {
+      @apply grid-cols-2;
+    }
+  }
+
+  @media (max-width: 639px) {
+    .sidebar__nav {
+      @apply grid-cols-1;
+    }
+  }
+}

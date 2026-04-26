@@ -1,0 +1,90 @@
+@reference "tailwindcss";
+
+@layer components {
+  .header {
+    @apply sticky top-0 z-30 mx-auto flex w-full max-w-[1400px] flex-wrap items-center justify-between gap-3 border-b border-slate-300 bg-slate-100 px-3 py-2 sm:px-4 lg:flex-nowrap;
+  }
+
+  .header__brand {
+    @apply flex min-w-0 items-center gap-3;
+  }
+
+  .header__brand-icon-wrap {
+    @apply flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-indigo-500;
+  }
+
+  .header__brand-icon {
+    @apply text-white;
+  }
+
+  .header__brand-copy {
+    @apply min-w-0 leading-tight;
+  }
+
+  .header__brand-title {
+    @apply truncate text-3xl font-extrabold text-indigo-900 sm:text-4xl;
+  }
+
+  .header__brand-subtitle {
+    @apply mt-0.5 truncate text-sm text-slate-500;
+  }
+
+  .header__actions {
+    @apply ml-auto flex items-center gap-2 sm:gap-3;
+  }
+
+  .header__status {
+    @apply flex items-center gap-2 rounded-full border border-slate-300 bg-slate-50 px-3 py-1 text-sm;
+  }
+
+  .header__status-dot {
+    @apply h-2.5 w-2.5 rounded-full bg-sky-500;
+  }
+
+  .header__status-text {
+    @apply font-medium text-slate-700;
+  }
+
+  .header__time {
+    @apply flex items-center gap-1 rounded-full border border-slate-300 bg-slate-50 px-3 py-1 text-sm text-slate-500;
+  }
+
+  .header__time-value {
+    @apply font-medium;
+  }
+
+  .header__notification {
+    @apply relative mx-1 text-slate-500;
+  }
+
+  .header__notification-icon {
+    @apply text-slate-500;
+  }
+
+  .header__notification-badge {
+    @apply absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white;
+  }
+
+  .header__avatar {
+    @apply flex h-7 w-7 items-center justify-center rounded-md bg-violet-500 text-sm font-bold text-white;
+  }
+
+  @media (max-width: 767px) {
+    .header__brand-title {
+      @apply text-xl;
+    }
+
+    .header__brand-subtitle {
+      @apply text-xs;
+    }
+
+    .header__actions {
+      @apply w-full justify-end;
+    }
+
+    .header__time-value,
+    .header__status-text {
+      @apply text-xs;
+    }
+  }
+}
